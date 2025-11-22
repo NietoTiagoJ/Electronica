@@ -1,0 +1,38 @@
+\documentclass{article}
+\usepackage{listings}
+\usepackage{xcolor} % Para colores en el código fuente
+
+% Configuración del paquete listings para Verilog
+\lstdefinestyle{verilog}{
+    language=Verilog,
+    basicstyle=\ttfamily\small,
+    keywordstyle=\color{blue},
+    commentstyle=\color{green},
+    stringstyle=\color{red},
+    numberstyle=\tiny\color{gray},
+    stepnumber=1,
+    numbersep=5pt,
+    backgroundcolor=\color{lightgray},
+    frame=single,
+    rulecolor=\color{black},
+    showstringspaces=false,
+    breaklines=true,           % Permite el ajuste automático de líneas largas
+    postbreak=\mbox{\textcolor{red}{$\hookrightarrow$}\space} % Símbolo de continuación
+}
+
+\begin{document}
+
+\title{Inclusion of Verilog Code in LaTeX}
+\author{Your Name}
+\date{\today}
+\maketitle
+
+\section{Introduction}
+In this document, we include and format Verilog code from two files using the \texttt{listings} package.
+
+\section{Verilog Code from mx.v}
+
+Below is the content of the file \texttt{mx.v}:
+
+\lstinputlisting[style=verilog,
+

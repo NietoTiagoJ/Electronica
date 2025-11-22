@@ -1,0 +1,37 @@
+$date
+	Fri Jul  5 01:01:55 2024
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module decodificador $end
+$var wire 1 ! A $end
+$var wire 1 " B $end
+$var wire 1 # C $end
+$var wire 1 $ D $end
+$var wire 1 % a $end
+$var wire 1 & b $end
+$var wire 1 ' c $end
+$var wire 1 ( d $end
+$var wire 1 ) e $end
+$var wire 1 * f $end
+$var wire 1 + g $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+x+
+x*
+x)
+x(
+x'
+x&
+x%
+z$
+z#
+z"
+z!
+$end

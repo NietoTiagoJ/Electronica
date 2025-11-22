@@ -1,0 +1,10 @@
+Usuario: Hello
+ID: 65
+Contador: 123
+Porcentaje: 456
+
+Usuario: HeÿAHello
+ID: 65
+Contador: 123
+Porcentaje: 456
+

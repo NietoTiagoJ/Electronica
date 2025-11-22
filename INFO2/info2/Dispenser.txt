@@ -1,0 +1,17 @@
+23/09
+
+-Calc for injector, but plus delta_p (return for midle-tank)
+
+injector
+
+	integral cilinder, 2pi, r-b, delta_M - delta_p
+
+
+Rehacer sistema para RF_id para incorporar lectura de desde los vasos,
+incluir sistema de verificacion y API para pagos, minimo el uso de mercado pago
+
+Arreglar reunion con la gente de industrial por el lavadero
+
+realizar pruebas para sacar desviacion estandar de la perdida de retorno del injector de fernet, modelizar el mezclador de fernet
+
+Ver de hacer el sistema para igualar presion 

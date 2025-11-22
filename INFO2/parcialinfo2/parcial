@@ -1,0 +1,30 @@
+Define una clase Pelicula que represente una película con atributos como título, director y duración. Sobrecarga el constructor para que acepte diferentes combinaciones de parámetros.
+
+    Define la clase Pelicula con los atributos protegidos: titulo (string), director (string), y duracion (en minutos). 
+    Sobrecarga el constructor para que acepte:
+        Dos parámetros: titulo (inicializa la duración a 0 y director con "Desconocido").
+        Tres parámetros: titulo, director, y duracion.
+    Implementa un método público llamado mostrarInformacion que muestre la información de la película.
+    Implementa los setters y getters para los atributos que consideres necesarios para la clase.
+    En la función main, crea objetos de la clase Pelicula usando las diferentes versiones del constructor y utiliza el método mostrarInformacion para mostrar la información.
+
+El siguiente programa utiliza una macro para encontrar el valor máximo entre dos números. El programa debe ser modificado para reemplazar esta macro por una función inline que acepte los tipo de dato: enteros, flotantes o caracteres, y devuelva el valor máximo. Además, la función debe ser probada en el main con diferentes tipos de datos. Puedes usar plantilla o sobrecarga de función.
+
+#include <iostream>
+
+// Macro para encontrar el valor máximo entre dos números
+#define MAXIMO(a, b) ((a) > (b) ? (a) : (b))
+
+int main() {
+    int num1 = 3, num2 = 7;
+    float num3 = 4.5, num4 = 2.3;
+    char char1 = 'a', char2 = 'z';
+
+    std::cout << "Máximo entre " << num1 << " y " << num2 << " es: " << MAXIMO(num1, num2) << std::endl;
+    std::cout << "Máximo entre " << num3 << " y " << num4 << " es: " << MAXIMO(num3, num4) << std::endl;
+    std::cout << "Máximo entre '" << char1 << "' y '" << char2 << "' es: " << MAXIMO(char1, char2) << std::endl;
+
+    return 0;
+}
+
+

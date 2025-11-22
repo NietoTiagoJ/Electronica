@@ -1,0 +1,212 @@
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+class Pelicula{
+	public:	
+		Pelicula();
+		Pelicula(string t);
+		Pelicula(string t, string direc, unsigned long d);
+		void set(string t,string direc, unsigned long d);
+		void getTitulo();
+		void getDirector();
+		void getDuracion();
+		void mostrarInformacion();
+	protected:
+		string titulo;
+		string director;
+		unsigned long duracion;
+};
+
+
+Pelicula::Pelicula(){}
+
+Pelicula::Pelicula(string t){
+	this->titulo = t;
+	this->director = "Desconocido";
+	this->duracion = 0;
+}
+
+Pelicula::Pelicula(string t, string direc, unsigned long d){
+	this->titulo = t;
+	this->director = direc;
+	this->duracion = d;
+}
+
+void Pelicula::set(string t,string direc,unsigned long d){
+	this->titulo= t;
+	this->director = direc;
+	this->duracion = d;
+}
+
+
+void Pelicula::getTitulo(){
+	cout<<this->titulo<<endl;
+}
+
+void Pelicula::getDirector(){
+	cout<<this->director<<endl;
+}
+
+void Pelicula::getDuracion(){
+	cout<<this->duracion<<endl;
+}
+
+
+void Pelicula::mostrarInformacion(){
+	cout<< "Titulo: "<< this->titulo <<endl;
+	cout<< "Director: "<< this->director <<endl;
+	cout<< "Duracion: "<< this->duracion << endl;
+}
+
+int main(){
+	
+	Pelicula Avatar;
+	Avatar.set("Avatar","Ni idea",154);
+	Avatar.mostrarInformacion();
+	
+	Pelicula batman("Batman");
+	batman.mostrarInformacion();	
+	batman.getTitulo();
+	
+	Pelicula alicia("Alicia en el pais de la maravillas","ni idea x3",143);
+	alicia.mostrarInformacion();
+	return 0;
+}
+------------------------------------------------------------------------------------------
+
+A continuación se presenta un programa que incluye una función encontrarMayor, la cual encuentra el mayor número en un vector de enteros. Debes modificar este programa para que la función encontrarMayor sea una plantilla de función, permitiendo que pueda encontrar el mayor número en un vector de cualquier tipo de dato numérico (float, int, double, long, etc).
+
+#include <iostream>
+#include <vector>
+
+// Función para encontrar el mayor número en un vector de enteros
+int encontrarMayor(const std::vector<int>& vec) {
+    int mayor = vec[0];
+    for (std::size_t i = 1; i < vec.size(); i++) {
+        if (vec[i] > mayor) {
+            mayor = vec[i];
+        }
+    }
+    return mayor;
+}
+
+int main() {
+    std::vector<int> vecEnteros;
+    vecEnteros.push_back(3);
+    vecEnteros.push_back(7);
+    vecEnteros.push_back(2);
+    vecEnteros.push_back(9);
+
+    std::cout << "El mayor número en el vector de enteros es: " << encontrarMayor(vecEnteros) << std::endl;
+
+    return 0;
+}
+--------------------------------------------------------------------------------------------------------
+
+En el microcontrolador ATmega328 se utilizan los registros DDRx, PINx y PORTx (donde x se reemplaza por el puerto B, C o D) para programar las entradas/salidas digitales. Escribir las líneas de código para:
+
+    Configurar el bit 0 del puerto C (o sea, PC0) como salida.
+    Configurar el bit 1 del puerto C (o sea, PC1) como entrada.
+    Configurar los bits 2 y 3 del puerto D (o sea, PD2 y PD3) como salida.
+    Escribir un 0 lógico en el bit PC0.
+    Verificar que el bit PC1 es un 1 lógico (utilizar un condicional if que resulte verdadero ante la condición indicada).
+
+(1.5 puntos
+
+
+En el microcontrolador ATmega328 se utilizan el registro UBRR0 para configurar la velocidad de transmisión de la USART0. Este registro está dividido en dos partes: UBRR0L (8-bits de menor peso) y UBRR0H (8-bits de mayor peso). Escribir las líneas de código en lenguaje C que:
+
+    Defina una variable (ubrr) de 16-bits e inicialice su valor a la constante simbólica DIVISOR.
+    Asigne a los registros UBRR0L y UBRR0H los 8-bits de menor y mayor peso, respectivamente, de la variable de 16-bits.
+
+(0.5 puntos)
+-------------------------------------------------------------------------------------------------------------
+
+
+¿Qué utilidad tiene un cable Null Modem?	
+
+La trama de comunicación serie definida como 5E2 indica:
+
+Para una comunicación serie Full Duplex entre una PC y un Arduino, las señales mínimas a conectar son:
+
+En una comunicación serie RS-232 un uno lógico o marca acepta los siguientes niveles de tensión:
+
+En una comunicación serie RS-232 un cero lógico o espacio acepta los siguientes niveles de tensión:
+
+¿Qué función cumple el registro DDRx del microcontrolador ATmega328?
+
+La sobrecarga de funciones en C++ permite:
+
+¿Qué sucede al llamar a la siguiente función con una variable int como argumento?
+void funcionPrueba(int &a) {
+  std::cout << *a;
+}
+
+Se desea crear una variable entera de forma dinámica en C++ e inicializar su valor a 10. ¿Cuál es la sentencia correcta?
+
+Las funciones miembros de una clase conocidas como "funciones de utilidad" son:
+
+El especificador de acceso a miembro private en una declaración de clase indica que:
+
+Las funciones miembros de una clase conocidas como "setter y getter" son:
+
+Las funciones miembros de una clase conocidas como "setter y getter" son:
+
+¿Cuál de los siguientes operadores permite definir las funciones miembros de una clase fuera de la declaración de clase?
+
+¿Cuál de los siguientes operadores permite definir las funciones miembros de una clase fuera de la declaración de clase?
+
+::
+
+¿Cuál de las siguientes afirmaciones NO es correcta para el constructor de una clase?
+
+¿Cuál de las siguientes afirmaciones NO es correcta para el constructor de una clase?
+
+Se desea implementar una clase en C++ para almacenar y operar con números complejos, cuyo constructor debe recibir los valores a cargar como parte real e imaginaria y tener cero como valores por defecto. ¿Cuál de las siguientes líneas permite implementar el constructor?
+
+Se desea implementar una clase en C++ para almacenar y operar con números complejos, cuyo constructor debe recibir los valores a cargar como parte real e imaginaria y tener cero como valores por defecto. ¿Cuál de las siguientes líneas permite implementar el constructor?
+
+¿Cuál es el archivo de cabecera a incluir para utilizar las cadenas de C++ std::string?
+
+¿Cuál de las siguientes funciones miembros no pertenece a la clase std::string?
+
+Si una clase x necesita derivarse de una clase y, ¿cuál de las siguientes formas es correcta para hacerlo?
+
+¿Dónde pueden colocarse las declaraciones de amistad en una clase?
+----------------------------------------------------------------
+
+Define una clase Pelicula que represente una película con atributos como título, director y duración. Sobrecarga el constructor para que acepte diferentes combinaciones de parámetros.
+
+    Define la clase Pelicula con los atributos protegidos: titulo (string), director (string), y duracion (en minutos). 
+    Sobrecarga el constructor para que acepte:
+        Dos parámetros: titulo (inicializa la duración a 0 y director con "Desconocido").
+        Tres parámetros: titulo, director, y duracion.
+    Implementa un método público llamado mostrarInformacion que muestre la información de la película.
+    Implementa los setters y getters para los atributos que consideres necesarios para la clase.
+    En la función main, crea objetos de la clase Pelicula usando las diferentes versiones del constructor y utiliza el método mostrarInformacion para mostrar la información.
+
+
+------------------------------------------------------------------------
+El siguiente programa utiliza una macro para encontrar el valor máximo entre dos números. El programa debe ser modificado para reemplazar esta macro por una función inline que acepte los tipo de dato: enteros, flotantes o caracteres, y devuelva el valor máximo. Además, la función debe ser probada en el main con diferentes tipos de datos. Puedes usar plantilla o sobrecarga de función.
+
+#include <iostream>
+
+// Macro para encontrar el valor máximo entre dos números
+#define MAXIMO(a, b) ((a) > (b) ? (a) : (b))
+
+int main() {
+    int num1 = 3, num2 = 7;
+    float num3 = 4.5, num4 = 2.3;
+    char char1 = 'a', char2 = 'z';
+
+    std::cout << "Máximo entre " << num1 << " y " << num2 << " es: " << MAXIMO(num1, num2) << std::endl;
+    std::cout << "Máximo entre " << num3 << " y " << num4 << " es: " << MAXIMO(num3, num4) << std::endl;
+    std::cout << "Máximo entre '" << char1 << "' y '" << char2 << "' es: " << MAXIMO(char1, char2) << std::endl;
+
+    return 0;
+}
+
+
+
